@@ -9,6 +9,7 @@ async function handleShortnerURL(req, res) {
     shortId: newId,
     redirectURL: body.url,
     visitHistory: [],
+    createdBy: req.user._id,
   });
 
   return res.render("url", {
